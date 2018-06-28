@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/search/search",
+    "pages/home/home",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "百度小说",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color":"#dddddd",
+    "selectedColor":"#3cc51f",
+    "borderStyle":"gray",
+    "backgroundColor":"#fff",
+    "list":[{
+      "pagePath":"pages/search/search",
+      "text":"校友信息搜索"
+    },{
+      "pagePath":"pages/home/home",
+      "text":"校友信息录入"
+    }]
+  },
+  "networkTimeout":{
+    "request":3000,
+    "connectSocket":3000,
+    "uploadFile":3000,
+    "downloadFile":3000
+  },
+  "debug":true
+}

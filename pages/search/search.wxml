@@ -1,0 +1,35 @@
+<!--search.wxml-->
+
+<view class="container">
+
+          <view  class="novel_logo" >
+            <image class="logo_image" src="../../image/novel_icon_shelf.png"  mode="aspectFit"></image>
+            <text class="logo_name">校友信息搜索</text>
+          </view>
+          
+          <view class="search" >
+            <image class="search_logo" src="../../image/novel_new_search_icon.png"/>
+            <input class="search_input" bindchange="bindInputName" bindFocus="bindFocusStyle" placeholder="姓名"/>
+          </view>
+
+          <text> \n </text>
+
+          <view class="search" >
+            <image class="search_logo" src="../../image/novel_new_search_icon.png"/>
+            <input class="search_input" bindchange="bindInputCity" bindFocus="bindFocusStyle" placeholder="所在城市"/>
+          </view>
+
+          <text> \n </text>
+
+          <view class="search" >
+            <image class="search_logo" src="../../image/novel_new_search_icon.png"/>
+            <input class="search_input" bindchange="bindInputIndustry" bindFocus="bindFocusStyle" placeholder="行业"/>
+          </view>
+
+</view>
+          
+<view class = "section">
+  <view class="search_button_area">
+    <button type="primary" ontap = "login">搜索</button>
+  </view>
+</view>
