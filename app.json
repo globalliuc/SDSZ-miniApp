@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/search/search",
+    "pages/search/result",
+    "pages/search/detail",
     "pages/home/home",
     "pages/logs/logs"
   ],
@@ -21,7 +23,8 @@
     },{
       "pagePath":"pages/home/home",
       "text":"校友信息录入"
-    }]
+    }
+    ]
   },
   "networkTimeout":{
     "request":3000,

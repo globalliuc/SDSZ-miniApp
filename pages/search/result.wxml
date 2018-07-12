@@ -1,0 +1,23 @@
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">姓名</view>
+    <view class="th year">入学年份</view>
+    <view class="th school">大学</view>
+    <view class="th "></view>
+  </view>
+  <block wx:for="{{people}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.Name}}</view>
+      <view class="td year">{{item.Year}}</view>
+      <view class="td school">{{item.College}}</view>
+      <view class="td"><button class='btn' bindtap='moreInfo' data-people="{{item}}" >更多信息</button></view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.Name}}</view>
+      <view class="td year">{{item.Year}}</view>
+      <view class="td school">{{item.College}}</view>
+      <view class="td"><button class='btn' bindtap='moreInfo' data-people="{{item}}" >更多信息</button></view>
+    </view>
+  </block>
+</view>
+

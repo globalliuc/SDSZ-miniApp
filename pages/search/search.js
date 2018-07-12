@@ -2,6 +2,7 @@
 //获取应用实例
 var Bmob = require('../../utils/bmob.js');
 var app = getApp()
+var people=[];
 Page({
   data: {
     motto: 'Hello World',
@@ -12,8 +13,7 @@ Page({
     target_name: '',
     target_city: '',
     target_industry: '',
-    result_data:'',
-    
+    result_data:'' 
   },
   bindInputName:function(e){
     this.setData({
@@ -47,13 +47,16 @@ Page({
         that.setData({
           result_data: results
         }) 
+        console.log(results)
         // 循环处理查询到的数据
         for (var i = 0; i < results.length; i++) {
           var object = results[i];
           console.log(object.id + ' - ' + object.get('Name'));
         }
+        wx.setStorageSync('people',results)
         wx.navigateTo({
-          url: "../logs/logs"
+          // url: "../logs/logs"
+          url:"../search/result"
         })
       },
       error: function (error) {
