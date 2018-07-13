@@ -38,7 +38,18 @@ Page({
     })
     var Alumdb = Bmob.Object.extend("alumdata");
     var query = new Bmob.Query(Alumdb)
-    query.equalTo("City", this.data.target_city);
+    if (this.data.target_city){
+      console.log("city search")
+      query.equalTo("City", this.data.target_city);
+    }
+    if (this.data.target_name){
+      console.log("name search")
+      query.equalTo("Name", this.data.target_name);
+    }
+    if (this.data.target_industry) {
+      console.log("industry search")
+      query.equalTo("Industry", this.data.target_industry);
+    }
     var that = this
     query.find({
       success: function (results) {
