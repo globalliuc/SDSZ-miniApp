@@ -30,14 +30,15 @@ Page({
       target_industry: e.detail.value
     })
   },
-  login:function(e){
+  search:function(e){
     wx.showToast({
       title: '搜索中',   
       icon: 'loading',
       duration: 1000
     })
     var Alumdb = Bmob.Object.extend("alumdata");
-    var query = new Bmob.Query(Alumdb)
+    var query = new Bmob.Query(Alumdb);
+    
     if (this.data.target_city){
       console.log("city search")
       query.equalTo("City", this.data.target_city);
@@ -67,7 +68,7 @@ Page({
         wx.setStorageSync('people',results)
         wx.navigateTo({
           // url: "../logs/logs"
-          url:"../search/result"
+          url:"../search_result/result"
         })
       },
       error: function (error) {
@@ -79,7 +80,7 @@ Page({
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
-      url: '../detail/detail'
+      url: '../search_result/detail'
     })
   },
   onLoad: function () {

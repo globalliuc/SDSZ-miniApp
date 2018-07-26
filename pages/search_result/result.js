@@ -18,7 +18,7 @@ Page({
     console.log(e.target.dataset.people)
     wx.setStorageSync('detail',e.target.dataset.people)
     wx.navigateTo({
-      url: "../search/detail"
+      url: "../search_result/detail"
     })
   }
 })
