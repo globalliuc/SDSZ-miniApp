@@ -2,6 +2,7 @@
 //获取应用实例
 var Bmob = require('../../utils/bmob.js');
 var app = getApp()
+var people=[];
 Page({
   data: {
     motto: 'Hello World',
@@ -12,8 +13,7 @@ Page({
     target_name: '',
     target_city: '',
     target_industry: '',
-    result_data:'',
-    
+    result_data:'' 
   },
   bindInputName:function(e){
     this.setData({
@@ -30,15 +30,27 @@ Page({
       target_industry: e.detail.value
     })
   },
-  login:function(e){
+  search:function(e){
     wx.showToast({
       title: '搜索中',   
       icon: 'loading',
       duration: 1000
     })
     var Alumdb = Bmob.Object.extend("alumdata");
-    var query = new Bmob.Query(Alumdb)
-    query.equalTo("City", this.data.target_city);
+    var query = new Bmob.Query(Alumdb);
+    
+    if (this.data.target_city){
+      console.log("city search")
+      query.equalTo("City", this.data.target_city);
+    }
+    if (this.data.target_name){
+      console.log("name search")
+      query.equalTo("Name", this.data.target_name);
+    }
+    if (this.data.target_industry) {
+      console.log("industry search")
+      query.equalTo("Industry", this.data.target_industry);
+    }
     var that = this
     query.find({
       success: function (results) {
@@ -47,13 +59,16 @@ Page({
         that.setData({
           result_data: results
         }) 
+        console.log(results)
         // 循环处理查询到的数据
         for (var i = 0; i < results.length; i++) {
           var object = results[i];
           console.log(object.id + ' - ' + object.get('Name'));
         }
+        wx.setStorageSync('people',results)
         wx.navigateTo({
-          url: "../logs/logs"
+          // url: "../logs/logs"
+          url:"../search_result/result"
         })
       },
       error: function (error) {
@@ -65,7 +80,7 @@ Page({
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
-      url: '../detail/detail'
+      url: '../search_result/detail'
     })
   },
   onLoad: function () {

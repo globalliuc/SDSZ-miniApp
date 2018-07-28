@@ -1,13 +1,15 @@
 {
   "pages":[
     "pages/search/search",
-    "pages/home/home",
+    "pages/add_info/add_info",
+    "pages/search_result/result",
+    "pages/search_result/detail",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "百度小说",
+    "navigationBarTitleText": "实验北美校友录",
     "navigationBarTextStyle":"black"
   },
   "tabBar":{
@@ -19,9 +21,10 @@
       "pagePath":"pages/search/search",
       "text":"校友信息搜索"
     },{
-      "pagePath":"pages/home/home",
+      "pagePath":"pages/add_info/add_info",
       "text":"校友信息录入"
-    }]
+    }
+    ]
   },
   "networkTimeout":{
     "request":3000,
