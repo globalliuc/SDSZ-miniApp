@@ -3,61 +3,74 @@
     <view class="th"></view>
     <view class="th year"></view>
   </view>
-    <view class="tr bg-g">
+
+  <view class="tr bg-g">
       <view class="td">姓名</view>
       <view class="td year">{{item.Name}}</view>
-    </view>
-        <view class="tr bg-g">
-      <view class="td">入学年</view>
-      <view class="td year">{{item.Year}}</view>
-    </view>
-        <view class="tr bg-g">
-      <view class="td">城市</view>
-      <view class="td year">{{item.City}}</view>
-    </view>
-        <view class="tr bg-g">
-      <view class="td">本科专业</view>
-      <view class="td year">{{item.CMajor}}</view>
-    </view>
-        <view class="tr bg-g">
-      <view class="td">大学</view>
-      <view class="td year">{{item.Collge}}</view>
-</view>
-        <view class="tr bg-g">
-      <view class="td">工作单位</view>
-      <view class="td year">{{item.Company}}</view>
-      
-    </view>
-        <view class="tr bg-g">
+  </view>
+
+  <view class="tr bg-g">
+    <view class="td">实验毕业年</view>
+    <view class="td year">{{item.GradYear}}</view>
+  </view>
+
+  <view class="tr bg-g">
+    <view class="td">城市</view>
+    <view class="td year">{{item.City}}</view>
+  </view>
+
+  <view class="tr bg-g">
+    <view class="td">本科专业</view>
+    <view class="td year">{{item.CollegeMajor}}</view>
+  </view>
+
+  <view class="tr bg-g">
+    <view class="td">大学</view>
+   <view class="td year">{{item.Collge}}</view>
+  </view>
+
+  <view class="tr bg-g">
+    <view class="td">工作单位</view>
+    <view class="td year">{{item.Company}}</view>    
+  </view>
+
+  <view class="tr bg-g">
       <view class="td">邮箱</view>
-      <view class="td year">{{item.Email}}</view>
-    </view>
-        <view class="tr bg-g">
+      <view class="td year" wx:if="{{item.Visibility=='全部显示'||item.Visibility=='显示邮箱'}}">{{item.Email}}</view>
+      <view class="td year" wx:else>因为隐私设置隐藏</view>
+  </view>
+
+  <view class="tr bg-g">
       <view class="td">领域</view>
       <view class="td year">{{item.Industry}}</view>
-    </view>
-        <view class="tr bg-g">
-      <view class="td">研究生</view>
-      <view class="td year">{{item.Master}}</view>
-    </view>
-        <view class="tr bg-g">
-      <view class="td">研究生专业</view>
-      <view class="td year">{{item.Mmajor}}</view>
-    </view>
-        <view class="tr bg-g">
-      <view class="td">privacy</view>
-      <view class="td year">{{item.Privacy}}</view>
-    </view>
-        <view class="tr bg-g">
-      <view class="td">stage</view>
-      <view class="td year">{{item.Stage}}</view>
-    </view>
-        <view class="tr bg-g">
-      <view class="td">status</view>
-      <view class="td year">{{item.Status}}</view>
-    </view>
-        <view class="tr bg-g">
-      <view class="td">微信号</view>
-      <view class="td year">{{item.Wechat-id}}</view>
-</view>
+  </view>
+  <view class="tr bg-g">
+    <view class="td">研究生</view>
+    <view class="td year">{{item.GradSchool}}</view>
+  </view>
+
+  <view class="tr bg-g">
+    <view class="td">研究生专业</view>
+    <view class="td year">{{item.GradMajor}}</view>
+  </view>
+
+  <view class="tr bg-g">
+    <view class="td">privacy</view>
+    <view class="td year">{{item.Visibility}}</view>
+  </view>
+  <view class="tr bg-g">
+    <view class="td">stage</view>
+    <view class="td year">{{item.Stage}}</view>
+  </view>
+
+  <view class="tr bg-g">
+    <view class="td">status</view>
+    <view class="td year">{{item.Status}}</view>
+  </view>
+
+  <view class="tr bg-g">
+    <view class="td">微信号</view>
+    <view class="td year" wx:if="{{item.Visibility=='全部显示'||item.Visibility=='显示微信号'}}">{{item.WeChatID}}</view>
+    <view class="td year" wx:else>因为隐私设置隐藏</view>
+  </view>
 </view>

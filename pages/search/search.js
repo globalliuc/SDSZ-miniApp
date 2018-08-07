@@ -36,7 +36,7 @@ Page({
       icon: 'loading',
       duration: 1000
     })
-    var Alumdb = Bmob.Object.extend("alumdata");
+    var Alumdb = Bmob.Object.extend("NewAlumData");
     var query = new Bmob.Query(Alumdb);
     
     if (this.data.target_city){

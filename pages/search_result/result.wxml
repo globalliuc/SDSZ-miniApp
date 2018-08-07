@@ -8,13 +8,13 @@
   <block wx:for="{{people}}">
     <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
       <view class="td">{{item.Name}}</view>
-      <view class="td year">{{item.Year}}</view>
+      <view class="td year">{{item.GradYear}}</view>
       <view class="td school">{{item.College}}</view>
       <view class="td"><button class='btn' bindtap='moreInfo' data-people="{{item}}" >更多信息</button></view>
     </view>
     <view class="tr" wx:else>
       <view class="td">{{item.Name}}</view>
-      <view class="td year">{{item.Year}}</view>
+      <view class="td year">{{item.GradYear}}</view>
       <view class="td school">{{item.College}}</view>
       <view class="td"><button class='btn' bindtap='moreInfo' data-people="{{item}}" >更多信息</button></view>
     </view>

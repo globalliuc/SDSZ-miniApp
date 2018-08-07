@@ -5,7 +5,6 @@ var app = getApp()
 var personalInfo = [];
 Page({
   data: {
-    motto: 'Hello World',
     userInfo: {},
     person_name: '',
     person_city: '',
@@ -33,7 +32,7 @@ Page({
       icon: 'loading',
       duration: 1000
     })
-    var Alumdb = Bmob.Object.extend("alumdata");
+    var Alumdb = Bmob.Object.extend("NewAlumData");
     var newInfo = new Alumdb();
 
     newInfo.set("Name",this.data.person_name);
@@ -48,7 +47,7 @@ Page({
       },
       error: function (result, error) {
         // 添加失败
-        console.log('创建日记失败');
+        console.log('创建新记录失败');
 
       }
     });

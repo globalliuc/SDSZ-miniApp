@@ -1,32 +1,32 @@
 <!--add_info.wxml-->
 <view class="container">
 
-          <view  class="logo" >
-            <image class="logo_image" src="../../image/novel_icon_shelf.png"  mode="aspectFit"></image>
-            <text class="logo_name">校友信息录入</text>
-          </view>
+  <view class="logo" >
+    <image class="logo_image" src="../../image/novel_icon_shelf.png"  mode="aspectFit"></image>
+    <text class="logo_name">校友信息录入</text>
+  </view>
           
-          <view class="instruction" >
-            <text>请校友在下面的表格中提交自己的信息，谢谢！</text>
-          </view>
+  <view class="instruction" >
+    <text>请校友在下面的表格中提交自己的信息，谢谢！</text>
+  </view>
 
-          <text> \n </text>
+  <text> \n </text>
 
-          <view class="input_field" >
-            <input class="search_input" bindchange="bindInputName" bindFocus="bindFocusStyle" placeholder="姓名"/>
-          </view>
+  <view class="input_field" >
+    <input class="search_input" bindchange="bindInputName" bindFocus="bindFocusStyle" placeholder="姓名"/>
+  </view>
 
-          <text> \n </text>
+  <text> \n </text>
 
-          <view class="input_field" >
-            <input class="search_input" bindchange="bindInputCity" bindFocus="bindFocusStyle" placeholder="所在城市"/>
-          </view>
+  <view class="input_field" >
+    <input class="search_input" bindchange="bindInputCity" bindFocus="bindFocusStyle" placeholder="所在城市"/>
+  </view>
 
-          <text> \n </text>
+  <text> \n </text>
 
-          <view class="input_field" >
-            <input class="search_input" bindchange="bindInputIndustry" bindFocus="bindFocusStyle" placeholder="行业"/>
-          </view>
+  <view class="input_field" >
+    <input class="search_input" bindchange="bindInputIndustry" bindFocus="bindFocusStyle" placeholder="行业"/>
+  </view>
 
 </view>
           
