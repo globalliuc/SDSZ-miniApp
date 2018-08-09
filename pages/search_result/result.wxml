@@ -3,7 +3,7 @@
     <view class="th">姓名</view>
     <view class="th year">入学年份</view>
     <view class="th school">大学</view>
-    <view class="th "></view>
+    <view class="th ">更多</view>
   </view>
   <block wx:for="{{people}}">
     <view class="tr bg-g" wx:if="{{index % 2 == 0}}">

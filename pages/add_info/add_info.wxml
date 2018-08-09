@@ -10,23 +10,87 @@
     <text>请校友在下面的表格中提交自己的信息，谢谢！</text>
   </view>
 
-  <text> \n </text>
-
   <view class="input_field" >
     <input class="search_input" bindchange="bindInputName" bindFocus="bindFocusStyle" placeholder="姓名"/>
   </view>
 
-  <text> \n </text>
-
   <view class="input_field" >
-    <input class="search_input" bindchange="bindInputCity" bindFocus="bindFocusStyle" placeholder="所在城市"/>
+    <input class="search_input" bindinput="bindInputCity" value="{{person_city_input_disp}}" bindFocus="bindFocusStyle" placeholder="所在城市（若列表中没有请英文输入州名）" />
+    <scroll-view scroll-y="true" class="scrollview">
+      <view wx:for="{{person_city_arr}}">
+        <view id="{{item}}" bindtap="itemtap" class="itemview">{{item}}</view>
+      </view>
+    </scroll-view>
   </view>
 
-  <text> \n </text>
+  <view class="selection_field" >
+    <picker bindchange="bindStageChange" value="{{stage_index}}" range="{{stage_arr}}">
+      <view class="picker">
+        在实验就读阶段：{{stage_arr[stage_index]}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="selection_field" >
+    <picker bindchange="bindGradYearChange" value="{{grad_year_index}}" range="{{grad_year_arr}}">
+      <view class="picker">
+        实验毕业年份(如初高中皆为实验则按高中)：{{grad_year_arr[grad_year_index]}}
+      </view>
+    </picker>
+  </view>
 
   <view class="input_field" >
-    <input class="search_input" bindchange="bindInputIndustry" bindFocus="bindFocusStyle" placeholder="行业"/>
+    <input class="search_input" bindchange="bindInputEmail" bindFocus="bindFocusStyle" placeholder="email"/>
   </view>
+
+  <view class="input_field" >
+    <input class="search_input" bindchange="bindInputWeChatID" bindFocus="bindFocusStyle" placeholder="微信号"/>
+  </view>
+
+  <view class="selection_field" >
+    <picker bindchange="bindVisibilityChange" value="{{visibility_index}}" range="{{visibility_arr}}">
+      <view class="picker">
+        是否希望其他校友看到你的联系方式：{{visibility_arr[visibility_index]}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="selection_field" >
+    <picker bindchange="bindStatusChange" value="{{status_index}}" range="{{status_arr}}">
+      <view class="picker">
+        现在身份：{{status_arr[status_index]}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="input_field" >
+    <input class="search_input" bindchange="bindInputCollege" bindFocus="bindFocusStyle" placeholder="本科就读学校(多所请以逗号隔开)"/>
+  </view>
+
+  <view class="input_field" >
+    <input class="search_input" bindchange="bindInputCollegeMajor" bindFocus="bindFocusStyle" placeholder="本科专业"/>
+  </view>
+
+  <view class="input_field" >
+    <input class="search_input" bindchange="bindInputGrad" bindFocus="bindFocusStyle" placeholder="研究生就读学校(多所请以逗号隔开)"/>
+  </view>
+
+  <view class="input_field" >
+    <input class="search_input" bindchange="bindInputGradMajor" bindFocus="bindFocusStyle" placeholder="研究生专业"/>
+  </view>
+
+  <view class="input_field" >
+    <input class="search_input" bindchange="bindInputCompany" bindFocus="bindFocusStyle" placeholder="公司(请已工作，或马上开始工作的校友填写,  曾工作公司也可写入，以逗号隔开)"/>
+  </view>
+
+  <view class="input_field" >
+    <input class="search_input" bindchange="bindInputTitle" bindFocus="bindFocusStyle" placeholder="职位(请已工作，或马上开始工作的校友填写)"/>
+  </view>
+
+  <view class="input_field" >
+    <input class="search_input" bindchange="bindInputIndustry" bindFocus="bindFocusStyle" placeholder="行业 (请已工作，或马上开始工作的校友填写）"/>
+  </view>
+
 
 </view>
           

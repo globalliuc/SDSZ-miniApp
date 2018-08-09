@@ -9,14 +9,14 @@
   
   <view class="search" >
 	  <image class="search_logo" src="../../image/novel_new_search_icon.png"/>
-	  <input class="search_input" bindblur="bindInputName" bindFocus="bindFocusStyle" placeholder="姓名"/>
+	  <input class="search_input" bindblur="bindInputName" placeholder="姓名"/>
   </view>
 
   <text> \n </text>
 
   <view class="search" >
 	  <image class="search_logo" src="../../image/novel_new_search_icon.png"/>
-	  <input class="search_input" bindinput="bindInputCity" value="{{target_city_disp}}" bindFocus="bindFocusStyle" placeholder="所在城市" />
+	  <input class="search_input" bindinput="bindInputCity" value="{{target_city_disp}}" bindFocus="bindFocusStyle" placeholder="所在城市（若列表中没有请英文输入州名）" />
     <scroll-view scroll-y="true" class="scrollview">
       <view wx:for="{{target_city_arr}}">
       <view id="{{item}}" bindtap="itemtap" class="itemview">{{item}}</view>

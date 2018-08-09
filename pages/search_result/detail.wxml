@@ -26,7 +26,7 @@
 
   <view class="tr bg-g">
     <view class="td">大学</view>
-   <view class="td year">{{item.Collge}}</view>
+   <view class="td year">{{item.College}}</view>
   </view>
 
   <view class="tr bg-g">
