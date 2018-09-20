@@ -1,7 +1,7 @@
 <view class="table">
   <view class="tr bg-w">
     <view class="th">姓名</view>
-    <view class="th year">入学年份</view>
+    <view class="th year">实验毕业年份</view>
     <view class="th school">大学</view>
     <view class="th ">更多</view>
   </view>
