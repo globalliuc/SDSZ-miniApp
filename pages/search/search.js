@@ -10,17 +10,27 @@ Page({
     target_city_disp: '',
     target_city_arr: [],
     target_industry: '',
-    result_data:'' 
+    name_val: '',
+    ins_val: '',
+    result_data:'',
+    input_field: -1
   },
   
   bindInputName:function(e){
     this.setData({
+      input_field :0,
       target_name: e.detail.value
     })
+    if (e.detail.value == ''){
+      this.setData({
+        input_field: -1
+      })
+    }
   },
   bindInputCity: function (e) {
     var cur_input = e.detail.value;
     this.setData({
+      input_field:1,
       target_city: cur_input
     })
     var choices = [];
@@ -36,6 +46,11 @@ Page({
       target_city_arr:choices
     })
     console.log(cur_input);
+    if (e.detail.value == '') {
+      this.setData({
+        input_field: -1
+      })
+    }
     
   },
   itemtap: function (e) {
@@ -50,9 +65,14 @@ Page({
   },
   bindInputIndustry: function (e) {
     this.setData({
+      input_field:2,
       target_industry: e.detail.value
     })
-    console.log("In");
+    if (e.detail.value == '') {
+      this.setData({
+        input_field: -1
+      })
+    }
   },
   search:function(e){
     wx.showToast({
@@ -81,6 +101,14 @@ Page({
         console.log("共查询到 " + results.length + " 条记录");
         // 保存搜索结果
         that.setData({
+          target_name: '',
+          target_city: '',
+          target_city_disp: '',
+          target_city_arr: [],
+          target_industry: '',
+          name_val: '',
+          ins_val: '',
+          input_field:-1,
           result_data: results
         }) 
         console.log(results)

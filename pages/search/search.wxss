@@ -70,6 +70,18 @@
   color: #000;
 }
 
+.disabled_input{
+  position: absolute;
+  top: 0.3rem;
+  left: 5%;
+  width: 85%;
+  border-radius: 10px;
+  border: 1px solid #E1E1E1;
+  
+  padding-left: 8%;
+  font-size: 14px;
+  color: #000;
+}
 .search_button_area{
   margin-top: 50px;
   position: relative;

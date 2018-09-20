@@ -1,7 +1,8 @@
 //app.js
+var db = require('db_info.js');
 var Bmob = require('utils/bmob.js');
 var BmobSocketIo = require('utils/bmobSocketIo.js').BmobSocketIo;
-Bmob.initialize("a7aaeffaace8100d85e7061722ac1422", "76fafea864741652427288514b810392");
+Bmob.initialize(db.db_appid, db.db_key);
 
 App({
   onLaunch: function () {
